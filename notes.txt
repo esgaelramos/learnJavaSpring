@@ -102,8 +102,30 @@ Hola Mundo con Spring Boot
 
 or, more easy:
 >>> sh gradlew bootRun //this command will run the project and will be listening for changes(only in development)
-
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+Configurar Spring Boot
+
+Propiedades de la Aplicación
+
+application.properties
+
++Configurar un nuevo puerto
+Posibilidad de añadir propiedades propias
+		server.port=8090
+		server.servlet.context-path=/gira-market/api
+
+>>> curl localhost:8090/gira-market/api/gira/hola 
+
++Gestión de perfiles según el tipo de despliegue
+++Se puede utilizar para desplegar perfiles para dev y para prod
+
+Ser gestionado para varios entornos
+Es muy importante seguir el patron de nombramiento
+
+APP.PROPIERTIES (ES EL ARCHIVO POR DEFECTO Y ORQUESTA TODOS LOS DEMAS ARCHIVOS DE PROPIEDADES)
+spring.profiles.active=dev //indica que el perfil activo es dev (respeta el patron de nombramiento)
+
+TODO LO QUE ESTA EN APP.PROPERTIES SE PUEDE SOBREESCRIBIR EN APP-DEV.PROPERTIES O APP-PROD.PROPERTIES
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
