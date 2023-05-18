@@ -30,6 +30,58 @@ Olvidarnos de la infraestructura y centrarnos en el desarrollo
 Puede funcionar con Tomcat (por defecto), Jetty o Undertow.
 Incluye gestión de dependencias iniciales, configuración automática y más
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+Crear nuestra primera aplicación con Spring Initializr
+
+¿Qué es Spring Initializr?
+https://start.spring.io/
+
+Sitio oficial para generar un proyecto de Spring Boot
+En poco tiempo y a nuestra medida
+Con todo lo que necesitamos para empezar
+
+MY INITIAL PROJECT:
+Project
++Gradle - Groovy
+Language
++Java
+Spring Boot
++2.7.11
+
+Project Metadata
+Group
++com.gira
+Artifact
++gira-market
+Name
++gira-market
+Description
++Project for start an API in Spring with Platzi.
+Package name
++com.gira.gira-market
+Packaging
++Jar
+Java
++11
+Dependencies
++Spring Web
+
+About Project:
+
+Los projectos Maven gestionan las dependencias con archivos XML
+
+Los archivos Gradle son escritos en Groovy y permite crear tareas que se pueden ejecutar al momento de hacer despliegue o integración continua
+
+Utilizar la version estable de spring boot y llenar los metadatos
+
+Spring Web: 
+permite genera APIs rest utilizando Apache Tomcat como servidor por defecto
+
+build.gradle: 
+Es donde está escrita toda la configuración del proyecto (plugins, version de Java, dependencias, software para pruebas etc.)
+
+Carpeta Gradle: Archivos necesarios para que gradle funcione
+
+@SpringBootApplication: indica la clase que gestiona la aplicación
 
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
