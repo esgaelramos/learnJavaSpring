@@ -127,6 +127,51 @@ spring.profiles.active=dev //indica que el perfil activo es dev (respeta el patr
 
 TODO LO QUE ESTA EN APP.PROPERTIES SE PUEDE SOBREESCRIBIR EN APP-DEV.PROPERTIES O APP-PROD.PROPERTIES
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+Crear la Estructura del Proyecto
+[IMG - 'i2-estructura-proyecto.png'] (El proyecto se divide en 3 capas: Web, Dominio y Persistencia)
+
+1. DOMINIO:
+DTO y objetos del dominio (Contexto de la aplicación)
+Servicios: Puente entre los controladores y la capa de persistencia.
+Especificación de repositorios: Interfaces que determinan las reglas que debe cumplir la persistencia para actuar entre los objetos de dominio y la DB.
+
+2. WEB:
+Controladores de API Rest.
+
+3. PERSISTENCIA:
+Repositorios: Implementan las especificaciones que tiene la capa de DOMINIO.
+Entities: Mapean y actúan como tablas de la DB.
+
++Create the packages:
+>>> cd src/main/java/com/gira/gira-market
+>>> mkdir -p domain/{dto,repository,service} persistance/{entity,crud} web/controller
+(El comando mkdir -p crea la carpeta y todas las subcarpetas necesarias) 
+The structure of the project is:
+|-- src
+|   |-- main
+|   |   |-- java
+|   |   |   |-- com
+|   |   |   |   |-- gira
+|   |   |   |   |   |-- gira-market
+|	|	|	|	|	|	GiraMarketApplication.java
+|   |   |   |   |   |   |-- domain
+|   |   |   |   |   |   |   |-- dto
+|   |   |   |   |   |   |   |-- repository
+|   |   |   |   |   |   |   |-- service
+|   |   |   |   |   |   |-- persistance
+|   |   |   |   |   |   |   |-- crud
+|   |   |   |   |   |   |   |-- entity
+|   |   |   |   |   |   |-- web
+|   |   |   |   |   |   |   |-- controller
+|   |   |   |   |   |   |   | 	HolaMundoController.java
+|   |   |-- resources
+...
+---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
