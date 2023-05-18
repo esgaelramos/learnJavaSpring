@@ -82,8 +82,27 @@ Es donde está escrita toda la configuración del proyecto (plugins, version de 
 Carpeta Gradle: Archivos necesarios para que gradle funcione
 
 @SpringBootApplication: indica la clase que gestiona la aplicación
-
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+Hola Mundo con Spring Boot
+
+-> UnZip the project and open your IDE!
+
+-> Open your project in your IDE!
+
+-> Create your controller! (the controller is the class that will manage the requests)
+
+-> Run the project!
+>>> cd gira-market
+>>> sh gradlew buid
+>>> cd build/libs
+>>> java -jar gira-market-0.0.1-SNAPSHOT.jar
+
+-> Test your API!
+>>> curl localhost:8080/gira/hola
+
+or, more easy:
+>>> sh gradlew bootRun //this command will run the project and will be listening for changes(only in development)
+
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
