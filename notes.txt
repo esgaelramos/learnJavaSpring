@@ -198,6 +198,31 @@ Permite generar automáticamente generar valores para las clases primarias en nu
 
 @OneToMany & @MatyToOne. Representar relaciones
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+¿Qué es Spring Data?
+Spring Data NO es una implementacion de JPA, 
+sino más bien es un proyecto que usa JPA para ofrecer funcionalidades extra en la gestion de tareas desde JAVA a las base de datos.
+
+Spring Data internamente tiene varios subproyectos, entre ellos: 
+Spring Data JPA y Spring Data JDBC, para conectarnos a BD relacionales (SQL). 
+Spring Data MongoDB y Spring Data Cassandra, son proyectos para conectarnos a BD no relacionales.
+
+La tarea principal de Spring Data es optimizar tareas repitivas.
+
+Spring data nos provee de respositorios sin codigo, nos permiten hacer todo tipo de operaciones en BD (CRUD) sin utilizar una linea de código.
+
+También nos provee de auditorías transparentes, por ello, posee un motor de auditorias que nos permite saber cuadno se insertó un registro, cuando se borró, cuando se actualizo en la BD, etc.
+---
+CÓMO IMPLEMENTAR SPRING DATA JPA IN NUESTRO PROYECTO?
+
+https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+Se copia el group y el name en las dependencias del archivo build.gradle:
+dependencies {
+    //Dependencia agregada
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	...
+}
+-> RERUN THE PROJECT (va a descargar las dependencias y fallar hasta que se agregue la configuración de la BD, dont worry!)
+
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
