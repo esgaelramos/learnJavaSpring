@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GiraMarketApplication<gira-market>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.gira.giramarket.GiraMarketApplication",
+            "projectName": "gira-market",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
