@@ -1,8 +1,11 @@
 package com.gira.giramarket.persistance.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -23,6 +26,13 @@ public class Cliente {
     @Column(name = "correo_electronico")
     private String correoElectronico;
 
+
+    // Relacion con la tabla compras
+    @OneToMany(mappedBy = "cliente") //por quien esta mapeado, qué atributo de la clase Compra!
+    private List<Compra> compras;    
+
+    
+    // Getters y Setters
     public Integer getId() {
         return id;
     }
@@ -69,5 +79,13 @@ public class Cliente {
 
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
+    }
+
+    public List<Compra> getCompras() {
+        return compras;
+    }
+
+    public void setCompras(List<Compra> compras) {
+        this.compras = compras;
     }
 }

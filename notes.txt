@@ -239,6 +239,8 @@ MAPEAR TABLAS CON CLASES (ENTITIES)
 Cuidado con el PK compuesta! (EmbededId) 
 Se crea su propia clase y se anota con @EmbededId!
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+MAPEAR RELACIONES ENTRE CLASES (RELACIONES ENTRE TABLAS)
+
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->

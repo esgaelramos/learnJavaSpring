@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -27,11 +29,27 @@ public class Producto {
     @Column(name = "precio_venta")
     private Double precioVenta;
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
     @Column(name = "cantidad_stock")
     private Integer cantidadStock;
 
     private Boolean estado;
 
+
+    // Relacion con la tabla categorias
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false) // No se puede modificar
+    private Categoria categoria;
+
+    
+    // Getters y Setters
     public Integer getIdProducto() {
         return idProducto;
     }
