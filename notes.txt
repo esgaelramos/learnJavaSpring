@@ -222,8 +222,17 @@ dependencies {
 	...
 }
 -> RERUN THE PROJECT (va a descargar las dependencias y fallar hasta que se agregue la configuración de la BD, dont worry!)
-
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+CREATE THE DATABASE IN PSQL
+
+CREATE DATABASE giramarket;
+
+#CREATE SCHEMA!
+sudo psql -U postgres -f schema.sql -d giramarket
+
+#CREATE DATA!
+sudo psql -U postgres -f data.sql -d giramarket
+
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
