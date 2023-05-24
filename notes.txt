@@ -242,6 +242,22 @@ Se crea su propia clase y se anota con @EmbededId!
 MAPEAR RELACIONES ENTRE CLASES (RELACIONES ENTRE TABLAS)
 
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+JPA REPOSITORIOS (CRUD) | INTERFACE CRUD REPOSITORY
+
+Spring Data Repositories
++Ahorra tiempo de desarrollo e implementación
++Permite operaciones CRUD sin escribir código
+
+3 tipos de repositorios:
+CrudRepository: 
+realizar el crud
+
+PagingAndSortingRepository: 
+incluye lo de Crud repository ademas de paginación y ordenamiento.
+
+JPARepository: 
+ademas de tener CrudRepository y PagingAndSortingRepository nos permite tareas específicas como Flush (combinar y guardar en memoria los cambios en la BD) y Batch (guardar en la BD en lotes)???
+
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
