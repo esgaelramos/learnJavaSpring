@@ -234,6 +234,10 @@ sudo psql -U postgres -f schema.sql -d giramarket
 sudo psql -U postgres -f data.sql -d giramarket
 
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+MAPEAR TABLAS CON CLASES (ENTITIES)
+
+Cuidado con el PK compuesta! (EmbededId) 
+Se crea su propia clase y se anota con @EmbededId!
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
