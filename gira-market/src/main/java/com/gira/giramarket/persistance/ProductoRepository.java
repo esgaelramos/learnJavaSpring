@@ -17,4 +17,13 @@ public class ProductoRepository {
         // casteada!
         return (List<Producto>) productoCrudRepository.findAll();
     }
+
+    public List<Producto> getByCategoria(int idCategoria) {
+        return productoCrudRepository.findByIdCategoriaOrderByNombreAsc(idCategoria);
+    }
+
+    public Optional<List<Producto>> getEscasos(int cantidadStock, boolean estado) {
+        return productoCrudRepository.findByCantidadStockLessThanAndEstado(cantidadStock, estado);
+    }
+
 }

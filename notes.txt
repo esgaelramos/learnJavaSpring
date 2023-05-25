@@ -259,6 +259,19 @@ JPARepository:
 ademas de tener CrudRepository y PagingAndSortingRepository nos permite tareas específicas como Flush (combinar y guardar en memoria los cambios en la BD) y Batch (guardar en la BD en lotes)???
 
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+QUERY METHODS!
+
++Permite crear consultas personalizadas sin escribir código SQL
++Proveen la generación de consultas mediante métodos
++Tienen la posibilidad de retornar Optional<T> para evitar nullPointerException
+
+IN SQL 
+SELECT * FROM productos WHERE id_categoria = ? ORDER BY nombre ASC; 
+
+IN QUERY METHODS
+findByCategoriaIdOrderByNombreAsc(int categoriaId);???
+
+
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
