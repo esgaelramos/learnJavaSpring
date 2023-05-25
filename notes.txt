@@ -271,8 +271,12 @@ SELECT * FROM productos WHERE id_categoria = ? ORDER BY nombre ASC;
 IN QUERY METHODS
 findByCategoriaIdOrderByNombreAsc(int categoriaId);???
 
-
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
+Patrón Data Mapper
++No se expone la base de datos a la API
++Desacopla la API de una base de datos específica
++No tener caqmpos innecearios en la API
++Sin mezclar idiomas, uno según la BD 
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
 ---> ---> ---> ---> ---> ---> ---> ---> ---> --->
